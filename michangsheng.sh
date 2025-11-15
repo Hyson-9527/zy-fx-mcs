@@ -14,7 +14,7 @@ SELF_NAME="michangsheng.sh"
 
 function create_default_config() {
     echo -e "${YELLOW}未见天机策，始创坤舆图...${RESET}"
-    echo 'GAME_DIR="/路径待设，请于菜单中修改/"' > "$CONFIG_FILE"
+    echo 'GAME_DIR="/路途未卜，道友可通天机之策，往之/"' > "$CONFIG_FILE"
     echo 'GAME_PORT="8001"' >> "$CONFIG_FILE"
 }
 
@@ -44,7 +44,7 @@ while true; do
     echo -e "${RED}零、 归于虚无${RESET}"
     echo -e "${GREEN}------------------------${RESET}"
 
-    read -n 1 -p "$(echo -e ${CYAN}"请示法旨: "${RESET})" choice
+    read -n 1 -p "$(echo -e ${CYAN}"敕令: "${RESET})" choice
     echo
 
     case $choice in
@@ -64,8 +64,8 @@ while true; do
             ;;
         2|[二])
             echo
-            echo -e "${CYAN}欲辟新洞天，须入档案器中，寻得路径，摹其宗卷，再复归此处置之${RESET}"
-            read -p "$(echo -e ${CYAN}请示下新洞天途径: ${RESET})" new_dir
+            echo -e "${CYAN}欲达仙府，须入档案器中，寻得路径，摹其宗卷，再复归此处置之${RESET}"
+            read -p "$(echo -e ${CYAN}请示新府之径: ${RESET})" new_dir
             if [ -d "$new_dir" ]; then
                 sed -i "s|^GAME_DIR=.*|GAME_DIR=\"$new_dir\"|" "$HOME/$CONFIG_FILE"
                 echo -e "${GREEN}星移斗转，洞天已成！${RESET}"
@@ -75,7 +75,7 @@ while true; do
             press_any_key_to_return
             ;;
         3|[三])
-            read -p "$(echo -e ${CYAN}请示下新传送阵号: ${RESET})" new_port
+            read -p "$(echo -e ${CYAN}请布新阵之号: ${RESET})" new_port
             if [[ "$new_port" =~ ^[0-9]+$ ]]; then
                 sed -i "s|GAME_PORT=.*|GAME_PORT=\"$new_port\"|" "$HOME/$CONFIG_FILE"
                 echo -e "${GREEN}阵号已更！${RESET}"
