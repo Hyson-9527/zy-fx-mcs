@@ -4,7 +4,7 @@ GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 RESET='\033[0m'
 
-LAUNCHER_URL="https://raw.githubusercontent.com/你的用户名/你的仓库名/main/milongsen.sh"
+LAUNCHER_URL="https://raw.githubusercontent.com/Hyson-9527/zy-fx-mcs/refs/heads/main/michangsheng.sh"
 LAUNCHER_NAME="milongsen.sh"
 
 echo -e "${GREEN}灵符已动，传法之机悄然开启……${RESET}"
